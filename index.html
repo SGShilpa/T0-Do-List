@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <div id="date-time"></div>
+            <h2>To-Do List <img src="img.png" alt="App Icon"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your task">
+                <select id="priority-selector">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="date" id="due-date">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container"></ul>
+            <div id="filter-container">
+                <button onclick="filterTasks('all')">All</button>
+                <button onclick="filterTasks('active')">Active</button>
+                <button onclick="filterTasks('completed')">Completed</button>
+            </div>
+            <button id="clear-all" onclick="clearAllTasks()">Clear All</button>
+            <div id="task-count"></div>
+            <div id="theme-toggle">
+                <label>
+                    <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()"> Dark Mode
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
